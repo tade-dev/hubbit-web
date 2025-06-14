@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -19,7 +20,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				playfair: ['"Playfair Display"', 'serif'],
+				poppins: ['"Poppins"', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -87,11 +88,21 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'pulse-glow': {
+					'0%, 100%': { boxShadow: '0 0 0 0 rgba(246, 138, 31, 0.4)' },
+					'50%': { boxShadow: '0 0 0 20px rgba(246, 138, 31, 0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+				'pulse-glow': 'pulse-glow 2s infinite'
 			}
 		}
 	},

@@ -36,11 +36,11 @@ const features = [
   },
 ];
 
-const stats = [
-  { icon: <Users size={24} />, number: "10K+", label: "Happy Users" },
-  { icon: <Star size={24} />, number: "4.9", label: "App Rating" },
-  { icon: <Shield size={24} />, number: "99.9%", label: "Uptime" },
-];
+// const stats = [
+//   { icon: <Users size={24} />, number: "10K+", label: "Happy Users" },
+//   { icon: <Star size={24} />, number: "4.9", label: "App Rating" },
+//   { icon: <Shield size={24} />, number: "99.9%", label: "Uptime" },
+// ];
 
 const Index = () => {
   return (
@@ -53,10 +53,7 @@ const Index = () => {
         </div>
         <div className="hidden md:flex items-center gap-8">
           <a href="#features" className="text-gray-600 hover:text-[#F68A1F] transition-colors font-medium">Features</a>
-          <a href="#about" className="text-gray-600 hover:text-[#F68A1F] transition-colors font-medium">About</a>
-          <button className="bg-[#F68A1F] text-white px-6 py-2 rounded-full font-semibold hover:bg-orange-600 transition-colors">
-            Get Started
-          </button>
+          <a href="/about" className="text-gray-600 hover:text-[#F68A1F] transition-colors font-medium">About</a>
         </div>
       </nav>
 
@@ -85,7 +82,8 @@ const Index = () => {
             </button>
           </div>
           
-          {/* Stats Section */}
+          {/* Stats Section - Commented Out */}
+          {/* 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
@@ -97,6 +95,7 @@ const Index = () => {
               </div>
             ))}
           </div>
+          */}
         </div>
       </section>
 
@@ -147,9 +146,9 @@ const Index = () => {
               <span className="text-2xl font-bold text-[#F68A1F]">Hubbit</span>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-6">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">Contact</a>
+              <a href="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+              <a href="/terms" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+              <a href="mailto:hi@tade.me" className="text-gray-400 hover:text-white transition-colors">Contact</a>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">

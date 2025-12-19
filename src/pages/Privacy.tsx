@@ -1,111 +1,83 @@
-
 import HabbitMascot from "../components/HabbitMascot";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 
 const Privacy = () => {
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-orange-50 via-white to-orange-100 font-poppins">
+    <div className="w-full min-h-screen bg-background font-nunito">
       {/* Navigation */}
-      <nav className="w-full px-6 py-4 flex justify-between items-center backdrop-blur-sm bg-white/80 sticky top-0 z-50 border-b border-orange-100">
-        <div className="flex items-center gap-3">
-          <Link to="/" className="flex items-center gap-3">
-            <HabbitMascot size={40} className="animate-float" />
-            <span className="text-2xl font-bold text-[#F68A1F]">Hubbit</span>
+      <nav className="w-full px-6 py-4 flex justify-between items-center">
+        <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
+            <HabbitMascot size={36} />
+            <span className="text-xl font-bold text-foreground">Hubbit</span>
           </Link>
         </div>
         <Link 
           to="/" 
-          className="flex items-center gap-2 text-gray-600 hover:text-[#F68A1F] transition-colors font-medium"
+          className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-smooth text-sm font-medium"
         >
-          <ArrowLeft size={20} />
-          Back to Home
+          <ArrowLeft size={18} />
+          Back
         </Link>
       </nav>
 
       {/* Content */}
-      <div className="max-w-4xl mx-auto px-6 py-16">
-        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Privacy Policy</h1>
-          <p className="text-gray-600 mb-8">Last updated: {new Date().toLocaleDateString()}</p>
+      <div className="max-w-3xl mx-auto px-6 py-12">
+        <div className="bg-card rounded-2xl p-8 md:p-10">
+          <h1 className="text-3xl font-bold text-foreground mb-2">Privacy Policy</h1>
+          <p className="text-muted-foreground text-sm mb-8">Last updated: {new Date().toLocaleDateString()}</p>
 
           <div className="space-y-8">
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Introduction</h2>
-              <p className="text-gray-600 leading-relaxed">
-                At Hubbit, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, 
-                and safeguard your information when you use our habit tracking application.
+              <h2 className="text-xl font-bold text-foreground mb-3">Introduction</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                At Hubbit, we take your privacy seriously. This Privacy Policy explains how we collect, use, and safeguard your information.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Information We Collect</h2>
-              <div className="space-y-4">
+              <h2 className="text-xl font-bold text-foreground mb-3">Information We Collect</h2>
+              <div className="space-y-3">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">Personal Information</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    We may collect personal information such as your name, email address, and other contact details 
-                    when you create an account or contact us for support.
+                  <h3 className="font-semibold text-foreground mb-1">Personal Information</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    We may collect your name, email address, and contact details when you create an account.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">Usage Data</h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    We collect information about how you use our app, including your habit tracking data, completion rates, 
-                    and app interaction patterns to improve our services.
+                  <h3 className="font-semibold text-foreground mb-1">Usage Data</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    We collect information about how you use our app to improve our services.
                   </p>
                 </div>
               </div>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">How We Use Your Information</h2>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
+              <h2 className="text-xl font-bold text-foreground mb-3">How We Use Your Information</h2>
+              <ul className="list-disc list-inside space-y-1 text-muted-foreground text-sm">
                 <li>To provide and maintain our service</li>
-                <li>To notify you about changes to our service</li>
+                <li>To notify you about changes</li>
                 <li>To provide customer support</li>
-                <li>To gather analysis or valuable information to improve our service</li>
-                <li>To monitor the usage of our service</li>
-                <li>To detect, prevent and address technical issues</li>
+                <li>To improve our service</li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Data Security</h2>
-              <p className="text-gray-600 leading-relaxed">
-                The security of your data is important to us. We implement appropriate security measures to protect 
-                your personal information against unauthorized access, alteration, disclosure, or destruction.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Data Retention</h2>
-              <p className="text-gray-600 leading-relaxed">
-                We will retain your personal data only for as long as is necessary for the purposes set out in this 
-                Privacy Policy. We will retain and use your data to comply with our legal obligations, resolve disputes, 
-                and enforce our policies.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Your Rights</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                You have the right to:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
+              <h2 className="text-xl font-bold text-foreground mb-3">Your Rights</h2>
+              <ul className="list-disc list-inside space-y-1 text-muted-foreground text-sm">
                 <li>Access, update, or delete your personal information</li>
                 <li>Request data portability</li>
                 <li>Withdraw consent at any time</li>
-                <li>Object to data processing</li>
-                <li>Request restriction of processing</li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>
-              <p className="text-gray-600 leading-relaxed">
-                If you have any questions about this Privacy Policy, please contact us at:{" "}
-                <a href="mailto:hi@tade.me" className="text-[#F68A1F] hover:underline">
+              <h2 className="text-xl font-bold text-foreground mb-3">Contact Us</h2>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Questions? Contact us at{" "}
+                <a href="mailto:hi@tade.me" className="text-primary hover:underline">
                   hi@tade.me
                 </a>
               </p>
@@ -115,21 +87,21 @@ const Privacy = () => {
       </div>
 
       {/* Footer */}
-      <footer className="w-full py-12 px-6 bg-gray-900 text-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center gap-3 mb-6 md:mb-0">
-              <HabbitMascot size={40} />
-              <span className="text-2xl font-bold text-[#F68A1F]">Hubbit</span>
+      <footer className="w-full py-12 px-6 bg-card border-t border-border">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex items-center gap-2">
+              <HabbitMascot size={32} />
+              <span className="text-lg font-bold text-foreground">Hubbit</span>
             </div>
-            <div className="flex flex-col md:flex-row items-center gap-6">
-              <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white transition-colors">Terms of Service</Link>
-              <a href="mailto:hi@tade.me" className="text-gray-400 hover:text-white transition-colors">Contact</a>
+            <div className="flex items-center gap-6 text-sm">
+              <Link to="/privacy" className="text-muted-foreground hover:text-foreground transition-smooth">Privacy Policy</Link>
+              <Link to="/terms" className="text-muted-foreground hover:text-foreground transition-smooth">Terms of Service</Link>
+              <a href="mailto:hi@tade.me" className="text-muted-foreground hover:text-foreground transition-smooth">Contact</a>
             </div>
           </div>
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>© {new Date().getFullYear()} Hubbit. All rights reserved. Built with ❤️ for habit builders.</p>
+          <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground text-sm">
+            <p>© {new Date().getFullYear()} Hubbit. All rights reserved.</p>
           </div>
         </div>
       </footer>

@@ -1,24 +1,34 @@
-
 import React from "react";
+import logoImg from "@/assets/logo.jpg";
+
+interface HabbitMascotProps {
+  size?: number;
+  className?: string;
+  bounce?: boolean;
+}
 
 const HabbitMascot = ({
   size = 140,
   className = "",
   bounce = false,
-}: {
-  size?: number;
-  className?: string;
-  bounce?: boolean;
-}) => (
-  <img
-    src="/lovable-uploads/d7c316d5-7095-427e-8379-06ed51218e1c.png"
-    width={size}
-    height={size}
-    alt="Hubbit Mascot"
-    className={`${className} ${bounce ? "animate-habbit-bounce" : ""} drop-shadow-xl select-none`}
-    draggable={false}
-    style={{ display: "inline-block" }}
-  />
+}: HabbitMascotProps) => (
+  <div
+    className={`${className} ${bounce ? "animate-habbit-bounce" : ""} relative overflow-hidden rounded-[20%] border-2 border-primary/20 bg-background shadow-xl`}
+    style={{
+      width: size,
+      height: size,
+      display: "inline-flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }}
+  >
+    <img
+      src={logoImg}
+      alt="Hubbit Logo"
+      className="w-full h-full object-cover select-none"
+      draggable={false}
+    />
+  </div>
 );
 
 export default HabbitMascot;

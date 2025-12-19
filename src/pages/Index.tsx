@@ -89,7 +89,7 @@ const Index = () => {
         style={{ scaleX }}
       />
       {/* Hero Section */}
-      <section className="w-full min-h-screen flex flex-col items-center justify-start pt-12 pb-20 px-6 relative overflow-hidden">
+      <section className="w-full min-h-screen flex flex-col items-center justify-start pt-20 md:pt-32 pb-20 px-6 relative overflow-hidden">
         {/* Animated Background Blur Elements */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -132,7 +132,7 @@ const Index = () => {
         </motion.nav>
 
         {/* Hero Content */}
-        <div className="max-w-4xl text-center mb-8 md:mb-16 relative z-10 px-4">
+        <div className="max-w-4xl text-center mb-16 md:mb-24 relative z-10 px-4">
           <motion.div
             variants={staggerContainer}
             initial="initial"
@@ -186,8 +186,8 @@ const Index = () => {
         </div>
 
         {/* Phone Mockups with Parallax & Float */}
-        <div className="relative w-full max-w-6xl mx-auto mt-12 md:mt-24 px-4 overflow-visible">
-          <div className="flex justify-center items-end gap-4 md:gap-12 relative h-[300px] xs:h-[450px] md:h-[600px]">
+        <div className="relative w-full max-w-6xl mx-auto mt-20 md:mt-24 px-4 overflow-visible">
+          <div className="flex justify-center items-end gap-4 md:gap-12 relative h-[450px] xs:h-[500px] md:h-[600px]">
             {/* Left Phone */}
             <motion.div
               variants={{

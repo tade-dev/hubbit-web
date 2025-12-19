@@ -98,17 +98,17 @@ const Index = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="w-full max-w-6xl flex justify-between items-center mb-24 relative z-10"
         >
-          <div className="flex items-center gap-2">
-            <HabbitMascot size={36} />
-            <span className="text-xl font-bold text-foreground tracking-tight">Hubbit</span>
+          <div className="flex items-center gap-1.5 md:gap-2">
+            <HabbitMascot size={28} className="md:w-[36px] md:h-[36px]" />
+            <span className="text-base md:text-xl font-bold text-foreground tracking-tight">Hubbit</span>
           </div>
-          <div className="flex items-center gap-8">
-            <a href="#features" className="text-muted-foreground hover:text-foreground transition-all duration-300 text-sm font-medium">Features</a>
-            <a href="/about" className="text-muted-foreground hover:text-foreground transition-all duration-300 text-sm font-medium">About</a>
+          <div className="flex items-center gap-2 md:gap-8">
+            <a href="#features" className="hidden sm:block text-muted-foreground hover:text-foreground transition-all duration-300 text-sm font-medium">Features</a>
+            <a href="/about" className="hidden xs:block text-muted-foreground hover:text-foreground transition-all duration-300 text-sm font-medium">About</a>
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <button className="bg-foreground text-background px-5 py-2 rounded-full text-sm font-bold opacity-60 cursor-not-allowed transition-all">Get App</button>
+                  <button className="bg-foreground text-background px-3 py-1.5 md:px-5 md:py-2 rounded-full text-[10px] md:text-sm font-bold opacity-60 cursor-not-allowed transition-all">Get App</button>
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>Coming Soon</p>
@@ -119,7 +119,7 @@ const Index = () => {
         </motion.nav>
 
         {/* Hero Content */}
-        <div className="max-w-4xl text-center mb-16 relative z-10">
+        <div className="max-w-4xl text-center mb-8 md:mb-16 relative z-10 px-4">
           <motion.div
             variants={staggerContainer}
             initial="initial"
@@ -127,20 +127,20 @@ const Index = () => {
           >
             <motion.h1
               variants={fadeInUp}
-              className="text-5xl md:text-7xl lg:text-8xl font-black text-foreground mb-2 leading-[1.1] tracking-tighter"
+              className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-foreground mb-1 md:mb-2 leading-[1.1] tracking-tighter"
             >
               Habits Made <span className="text-primary italic">Simple.</span>
             </motion.h1>
             <motion.h1
               variants={fadeInUp}
-              className="text-5xl md:text-7xl lg:text-8xl font-black text-foreground mb-8 leading-[1.1] tracking-tighter"
+              className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-foreground mb-6 md:mb-8 leading-[1.1] tracking-tighter"
             >
               Progress <span className="underline decoration-secondary decoration-8 underline-offset-4">Visualized.</span>
             </motion.h1>
 
             <motion.p
               variants={fadeInUp}
-              className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed font-medium"
+              className="text-base md:text-xl text-muted-foreground mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium"
             >
               Transform your daily routine with a habit tracker that's as beautiful as it is powerful. Track habits, journal patterns, and build lasting streaks.
             </motion.p>
@@ -173,8 +173,8 @@ const Index = () => {
         </div>
 
         {/* Phone Mockups with Parallax & Float */}
-        <div className="relative w-full max-w-6xl mx-auto mt-12 px-4">
-          <div className="flex justify-center items-end gap-4 md:gap-12 relative h-[400px] md:h-[600px]">
+        <div className="relative w-full max-w-6xl mx-auto mt-12 md:mt-24 px-4 overflow-visible">
+          <div className="flex justify-center items-end gap-4 md:gap-12 relative h-[300px] xs:h-[450px] md:h-[600px]">
             {/* Left Phone */}
             <motion.div
               variants={{
@@ -225,9 +225,9 @@ const Index = () => {
               }}
               initial="initial"
               animate="animate"
-              className="relative z-20"
+              className="relative z-20 transition-all duration-500"
             >
-              <div className="w-64 md:w-72 lg:w-80 rounded-[3.5rem] overflow-hidden phone-shadow bg-foreground/5 p-2 backdrop-blur-sm ring-1 ring-white/20">
+              <div className="w-[200px] xs:w-64 md:w-72 lg:w-80 rounded-[2.5rem] xs:rounded-[3.5rem] overflow-hidden phone-shadow bg-foreground/5 p-1.5 md:p-2 backdrop-blur-sm ring-1 ring-white/20">
                 <img
                   src={appScreenshot1}
                   alt="Hubbit Home Screen"

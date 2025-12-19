@@ -1,5 +1,5 @@
 import HabbitMascot from "../components/HabbitMascot";
-import { Clock10, Bell, LayoutDashboard, Heart, PlusCircle } from "lucide-react";
+import { Clock10, Bell, LayoutDashboard, Heart, PlusCircle, BookOpen } from "lucide-react";
 import appScreenshot1 from "@/assets/app-screenshot-1.png";
 import appScreenshot2 from "@/assets/app-screenshot-2.png";
 import appScreenshot3 from "@/assets/app-screenshot-3.png";
@@ -35,6 +35,12 @@ const features = [
     description:
       "Create, update, or remove habits in seconds with an intuitive and smooth workflow.",
   },
+  {
+    icon: <BookOpen className="w-6 h-6" />,
+    title: "Journaling for Reflection",
+    description:
+      "Capture your thoughts and reflect on your progress. Journaling helps you understand patterns and stay mindful of your journey.",
+  },
 ];
 
 const Index = () => {
@@ -63,10 +69,7 @@ const Index = () => {
             Progress Visualized.
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed opacity-0 animate-fade-in-up animation-delay-400">
-            Transform your daily routine with a habit tracker that's as beautiful as it is powerful. Experience 
-            <span className="text-primary font-semibold"> mindful tracking</span>, seamless 
-            <span className="text-primary font-semibold"> insights</span>, and 
-            <span className="text-primary font-semibold"> streaks</span> — all without the clutter.
+            Transform your daily routine with a habit tracker that's as beautiful as it is powerful. Track habits, journal your patterns, build streaks — all without the clutter.
           </p>
           
           {/* CTA Buttons */}
@@ -152,22 +155,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="w-full py-24 px-6 bg-background">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Ready to build better habits?
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Use your phone's camera to scan and download when available.
-          </p>
-          <div className="inline-block bg-card p-6 rounded-2xl shadow-lg">
-            <div className="w-32 h-32 bg-foreground/10 rounded-xl flex items-center justify-center">
-              <span className="text-muted-foreground text-sm font-medium">QR Coming Soon</span>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="w-full py-12 px-6 bg-card border-t border-border">
@@ -180,7 +167,7 @@ const Index = () => {
             <div className="flex items-center gap-6 text-sm">
               <a href="/privacy" className="text-muted-foreground hover:text-foreground transition-smooth">Privacy Policy</a>
               <a href="/terms" className="text-muted-foreground hover:text-foreground transition-smooth">Terms of Service</a>
-              <a href="mailto:hi@tade.me" className="text-muted-foreground hover:text-foreground transition-smooth">Contact</a>
+              <a href="mailto:akintadeseun816@gmail.com" className="text-muted-foreground hover:text-foreground transition-smooth">Contact</a>
             </div>
           </div>
           <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground text-sm">

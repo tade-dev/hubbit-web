@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion, useScroll, useSpring } from "framer-motion";
 import HabbitMascot from "../components/HabbitMascot";
 import { Clock10, Bell, LayoutDashboard, Heart, PlusCircle, BookOpen, ArrowRight } from "lucide-react";
@@ -71,6 +72,18 @@ const Index = () => {
 
   return (
     <div className="w-full min-h-screen bg-background">
+      <Helmet>
+        <title>Hubbit | Mindful Habit Tracker & Journal</title>
+        <meta name="description" content="Transform your daily routine with Hubbit - the beautiful, mindful habit tracker for iOS. Track habits, journal patterns, and build lasting streaks." />
+        <meta name="keywords" content="habit tracker, daily routine, mindful habits, productivity app, iOS habit tracker, habit journal, building habits, progress visualization" />
+        <meta property="og:title" content="Hubbit | Mindful Habit Tracker & Journal" />
+        <meta property="og:description" content="Transform your daily routine with Hubbit - the beautiful, mindful habit tracker for iOS." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Hubbit | Mindful Habit Tracker & Journal" />
+        <meta name="twitter:description" content="Transform your daily routine with Hubbit - the beautiful, mindful habit tracker for iOS." />
+        <link rel="canonical" href="https://usehubbit.xyz/" />
+      </Helmet>
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-primary z-50 origin-[0%]"
         style={{ scaleX }}

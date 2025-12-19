@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion, useScroll, useSpring } from "framer-motion";
 import HabbitMascot from "../components/HabbitMascot";
 import { Link } from "react-router-dom";
@@ -28,6 +29,13 @@ const About = () => {
 
   return (
     <div className="w-full min-h-screen bg-background font-nunito overflow-x-hidden">
+      <Helmet>
+        <title>About Hubbit | Our Philosophy & Vision</title>
+        <meta name="description" content="Learn about the philosophy behind Hubbit and our mission to help you build lasting habits with a simple and beautiful experience." />
+        <meta property="og:title" content="About Hubbit | Our Philosophy & Vision" />
+        <meta property="og:description" content="Learn about our mission to make personal growth simple and beautiful." />
+        <link rel="canonical" href="https://usehubbit.xyz/about" />
+      </Helmet>
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-primary z-50 origin-[0%]"
         style={{ scaleX }}

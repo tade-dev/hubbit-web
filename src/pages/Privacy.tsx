@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion, useScroll, useSpring } from "framer-motion";
 import HabbitMascot from "../components/HabbitMascot";
 import { Link } from "react-router-dom";
@@ -28,6 +29,11 @@ const Privacy = () => {
 
   return (
     <div className="w-full min-h-screen bg-background font-nunito overflow-x-hidden">
+      <Helmet>
+        <title>Privacy Policy | Hubbit</title>
+        <meta name="description" content="Read about how Hubbit protects your data and ensures your privacy while you focus on building better habits." />
+        <link rel="canonical" href="https://usehubbit.xyz/privacy" />
+      </Helmet>
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-primary z-50 origin-[0%]"
         style={{ scaleX }}

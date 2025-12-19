@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { motion, useScroll, useSpring } from "framer-motion";
 import HabbitMascot from "../components/HabbitMascot";
 import { Link } from "react-router-dom";
@@ -28,6 +29,11 @@ const Terms = () => {
 
   return (
     <div className="w-full min-h-screen bg-background font-nunito overflow-x-hidden">
+      <Helmet>
+        <title>Terms of Service | Hubbit</title>
+        <meta name="description" content="Review our terms of service to understand the rules and guidelines for using Hubbit." />
+        <link rel="canonical" href="https://usehubbit.xyz/terms" />
+      </Helmet>
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-primary z-50 origin-[0%]"
         style={{ scaleX }}

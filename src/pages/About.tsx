@@ -13,8 +13,8 @@ const About = () => {
             <span className="text-xl font-bold text-foreground">Hubbit</span>
           </Link>
         </div>
-        <Link 
-          to="/" 
+        <Link
+          to="/"
           className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-smooth text-sm font-medium"
         >
           <ArrowLeft size={18} />
@@ -102,7 +102,7 @@ const About = () => {
             <div className="flex items-center gap-6 text-sm">
               <Link to="/privacy" className="text-muted-foreground hover:text-foreground transition-smooth">Privacy Policy</Link>
               <Link to="/terms" className="text-muted-foreground hover:text-foreground transition-smooth">Terms of Service</Link>
-              <a href="mailto:hi@tade.me" className="text-muted-foreground hover:text-foreground transition-smooth">Contact</a>
+              <a href="mailto:akintadeseun816@gmail.com" className="text-muted-foreground hover:text-foreground transition-smooth">Contact</a>
             </div>
           </div>
           <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground text-sm">

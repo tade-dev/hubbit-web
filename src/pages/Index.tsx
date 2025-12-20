@@ -1,8 +1,10 @@
 import { Helmet } from "react-helmet-async";
 import { motion, useScroll, useSpring } from "framer-motion";
 import HabbitMascot from "../components/HabbitMascot";
-import { Clock10, Bell, LayoutDashboard, Heart, PlusCircle, BookOpen, ArrowRight } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Clock10, Bell, LayoutDashboard, Heart, PlusCircle, BookOpen, ArrowRight, Menu } from "lucide-react";
+import { Link } from "react-router-dom";
 import logoImg from "@/assets/logo.jpg";
 import appScreenshot1 from "@/assets/app-screenshot-1.png";
 import appScreenshot2 from "@/assets/app-screenshot-2.png";
@@ -115,19 +117,55 @@ const Index = () => {
             <HabbitMascot size={28} className="md:w-[36px] md:h-[36px]" />
             <span className="text-base md:text-xl font-bold text-foreground tracking-tight">Hubbit</span>
           </div>
-          <div className="flex items-center gap-2 md:gap-8">
-            <a href="#features" className="hidden sm:block text-muted-foreground hover:text-foreground transition-all duration-300 text-sm font-medium">Features</a>
-            <a href="/about" className="hidden xs:block text-muted-foreground hover:text-foreground transition-all duration-300 text-sm font-medium">About</a>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-8">
+            <a href="/" className="text-muted-foreground hover:text-foreground transition-all duration-300 text-sm font-medium">Home</a>
+            <a href="#features" className="text-muted-foreground hover:text-foreground transition-all duration-300 text-sm font-medium">Features</a>
+            <Link to="/about" className="text-muted-foreground hover:text-foreground transition-all duration-300 text-sm font-medium">About</Link>
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <button className="bg-foreground text-background px-3 py-1.5 md:px-5 md:py-2 rounded-full text-[10px] md:text-sm font-bold opacity-60 cursor-not-allowed transition-all">Get App</button>
+                  <button className="bg-foreground text-background px-5 py-2 rounded-full text-sm font-bold opacity-60 cursor-not-allowed transition-all">Get App</button>
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>Coming Soon</p>
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider>
+          </div>
+
+          {/* Mobile Navigation */}
+          <div className="md:hidden flex items-center gap-2">
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <button className="bg-foreground text-background px-3 py-1.5 rounded-full text-[10px] font-bold opacity-60 cursor-not-allowed transition-all">Get App</button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Coming Soon</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+
+            <Sheet>
+              <SheetTrigger asChild>
+                <button className="p-2 text-foreground hover:bg-secondary/20 rounded-lg transition-colors">
+                  <Menu size={24} />
+                </button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px] border-l-border bg-background pt-20">
+                <div className="flex flex-col gap-6">
+                  <a href="/" className="text-2xl font-black text-foreground hover:text-primary transition-colors">Home</a>
+                  <a href="#features" className="text-2xl font-black text-foreground hover:text-primary transition-colors">Features</a>
+                  <Link to="/about" className="text-2xl font-black text-foreground hover:text-primary transition-colors">About</Link>
+                  <div className="pt-8 mt-8 border-t border-border">
+                    <p className="text-sm font-bold text-muted-foreground mb-4 uppercase tracking-widest">Connect</p>
+                    <a href="mailto:akintadeseun816@gmail.com" className="text-lg font-bold text-foreground">Contact Us</a>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </motion.nav>
 
@@ -369,19 +407,19 @@ const Index = () => {
               </div>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-10 text-sm font-bold">
-              <a href="/about" className="text-muted-foreground hover:text-foreground transition-all">About</a>
-              <a href="#features" className="text-muted-foreground hover:text-foreground transition-all">Features</a>
-              <a href="/privacy" className="text-muted-foreground hover:text-foreground transition-all">Privacy</a>
-              <a href="/terms" className="text-muted-foreground hover:text-foreground transition-all">Terms</a>
-              <a href="mailto:akintadeseun816@gmail.com" className="bg-foreground text-background px-6 py-2 rounded-full hover:opacity-80 transition-all">Contact Us</a>
+              <Link to="/privacy" className="text-muted-foreground hover:text-foreground transition-all">Privacy</Link>
+              <Link to="/terms" className="text-muted-foreground hover:text-foreground transition-all">Terms</Link>
+              <a href="mailto:akintadeseun816@gmail.com" className="bg-foreground text-background px-6 py-2 rounded-full hover:opacity-80 transition-all font-bold">Contact Us</a>
             </div>
           </div>
           <div className="border-t border-border mt-12 pt-12 flex flex-col md:flex-row justify-between items-center gap-4 text-muted-foreground text-sm font-medium">
             <p>© {new Date().getFullYear()} Hubbit. Built with heart for better habits.</p>
-            <div className="flex gap-4">
-              <span>Twitter</span>
-              <span>Instagram</span>
-              <span>Product Hunt</span>
+            <div className="flex gap-6">
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-all">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>

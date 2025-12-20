@@ -2,7 +2,9 @@ import { Helmet } from "react-helmet-async";
 import { motion, useScroll, useSpring } from "framer-motion";
 import HabbitMascot from "../components/HabbitMascot";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Shield } from "lucide-react";
+import { ArrowLeft, Shield, Menu } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -44,21 +46,64 @@ const Privacy = () => {
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="w-full px-6 py-6 flex justify-between items-center max-w-7xl mx-auto z-10 sticky top-0 bg-background/80 backdrop-blur-md"
+        className="w-full px-6 py-6 flex justify-between items-center max-w-7xl mx-auto z-50 sticky top-0 bg-background/80 backdrop-blur-md"
       >
         <div className="flex items-center gap-2">
           <Link to="/" className="flex items-center gap-2 group">
-            <HabbitMascot size={36} />
-            <span className="text-xl font-bold text-foreground tracking-tight group-hover:text-primary transition-colors">Hubbit</span>
+            <HabbitMascot size={32} className="md:w-[40px] md:h-[40px]" />
+            <span className="text-xl md:text-2xl font-black text-foreground tracking-tight group-hover:text-primary transition-colors">Hubbit</span>
           </Link>
         </div>
-        <Link
-          to="/"
-          className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-all duration-300 text-sm font-bold bg-secondary/20 px-4 py-2 rounded-full"
-        >
-          <ArrowLeft size={18} />
-          Back
-        </Link>
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-8 text-sm font-bold">
+          <Link to="/" className="text-muted-foreground hover:text-foreground transition-all">Home</Link>
+          <a href="/#features" className="text-muted-foreground hover:text-foreground transition-all">Features</a>
+          <Link to="/about" className="text-muted-foreground hover:text-foreground transition-all">About</Link>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <button className="bg-foreground text-background px-5 py-2 rounded-full opacity-60 cursor-not-allowed transition-all">Get App</button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Coming Soon</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div className="md:hidden flex items-center gap-2">
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <button className="bg-foreground text-background px-3 py-1.5 rounded-full text-[10px] font-bold opacity-60 cursor-not-allowed transition-all">Get App</button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Coming Soon</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+
+          <Sheet>
+            <SheetTrigger asChild>
+              <button className="p-2 text-foreground hover:bg-secondary/20 rounded-lg transition-colors">
+                <Menu size={24} />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] border-l-border bg-background pt-20">
+              <div className="flex flex-col gap-6">
+                <Link to="/" className="text-2xl font-black text-foreground hover:text-primary transition-colors">Home</Link>
+                <a href="/#features" className="text-2xl font-black text-foreground hover:text-primary transition-colors">Features</a>
+                <Link to="/about" className="text-2xl font-black text-foreground hover:text-primary transition-colors">About</Link>
+                <div className="pt-8 mt-8 border-t border-border">
+                  <p className="text-sm font-bold text-muted-foreground mb-4 uppercase tracking-widest">Connect</p>
+                  <a href="mailto:akintadeseun816@gmail.com" className="text-lg font-bold text-foreground">Contact Us</a>
+                </div>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
       </motion.nav>
 
       {/* Hero Header */}
@@ -174,15 +219,20 @@ const Privacy = () => {
               </div>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-10 text-sm font-bold">
-              <Link to="/about" className="text-muted-foreground hover:text-foreground transition-all">About</Link>
-              <Link to="/" className="text-muted-foreground hover:text-foreground transition-all">Home</Link>
-              <Link to="/privacy" className="text-primary underline underline-offset-4">Privacy</Link>
+              <Link to="/privacy" className="text-primary decoration-2 underline-offset-4 underline">Privacy</Link>
               <Link to="/terms" className="text-muted-foreground hover:text-foreground transition-all">Terms</Link>
               <a href="mailto:akintadeseun816@gmail.com" className="bg-foreground text-background px-6 py-2 rounded-full hover:opacity-80 transition-all font-bold">Contact</a>
             </div>
           </div>
-          <div className="border-t border-border mt-12 pt-12 text-center text-muted-foreground text-sm font-medium">
+          <div className="border-t border-border mt-12 pt-12 flex flex-col md:flex-row justify-between items-center gap-4 text-muted-foreground text-sm font-medium">
             <p>© {new Date().getFullYear()} Hubbit. Protecting your progress.</p>
+            <div className="flex gap-6">
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-all">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </footer>

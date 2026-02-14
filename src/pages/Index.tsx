@@ -91,7 +91,7 @@ const Index = () => {
         style={{ scaleX }}
       />
       {/* Hero Section */}
-      <section className="w-full min-h-screen flex flex-col items-center justify-start pt-20 md:pt-32 pb-20 px-6 relative overflow-hidden">
+      <section className="w-full min-h-screen flex flex-col items-center justify-start pt-6 pb-20 px-6 relative overflow-hidden">
         {/* Animated Background Blur Elements */}
         <motion.div
           initial={{ opacity: 0 }}

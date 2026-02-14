@@ -75,14 +75,14 @@ const Index = () => {
   return (
     <div className="w-full min-h-screen bg-background">
       <Helmet>
-        <title>Hubbit | Mindful Habit Tracker & Journal</title>
-        <meta name="description" content="Transform your daily routine with Hubbit - the beautiful, mindful habit tracker for iOS. Track habits, journal patterns, and build lasting streaks." />
-        <meta name="keywords" content="habit tracker, daily routine, mindful habits, productivity app, iOS habit tracker, habit journal, building habits, progress visualization" />
-        <meta property="og:title" content="Hubbit | Mindful Habit Tracker & Journal" />
-        <meta property="og:description" content="Transform your daily routine with Hubbit - the beautiful, mindful habit tracker for iOS." />
+        <title>Hubbit | AI Habit Tracker</title>
+        <meta name="description" content="Transform your daily routine with Hubbit - the beautiful, mindful AI habit tracker for iOS. Track habits, journal patterns, and build lasting streaks." />
+        <meta name="keywords" content="habit tracker, daily routine, mindful habits, productivity app, iOS habit tracker, habit journal, building habits, progress visualization, AI habit tracker" />
+        <meta property="og:title" content="Hubbit | AI Habit Tracker" />
+        <meta property="og:description" content="Transform your daily routine with Hubbit - the beautiful, mindful AI habit tracker for iOS." />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Hubbit | Mindful Habit Tracker & Journal" />
+        <meta name="twitter:title" content="Hubbit | AI Habit Tracker" />
         <meta name="twitter:description" content="Transform your daily routine with Hubbit - the beautiful, mindful habit tracker for iOS." />
         <link rel="canonical" href="https://usehubbit.xyz/" />
       </Helmet>

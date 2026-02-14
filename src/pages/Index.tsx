@@ -3,7 +3,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import HabbitMascot from "../components/HabbitMascot";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Clock10, Bell, LayoutDashboard, Heart, PlusCircle, BookOpen, ArrowRight, Menu } from "lucide-react";
+import { CalendarCheck, BellRing, Pencil, BrainCircuit, Smartphone, Flame, ArrowRight, Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 import logoImg from "@/assets/logo.jpg";
 import appScreenshot1 from "@/assets/app-screenshot-1.png";
@@ -12,40 +12,40 @@ import appScreenshot3 from "@/assets/app-screenshot-3.png";
 
 const features = [
   {
-    icon: <Clock10 className="w-6 h-6" />,
-    title: "Simple Daily Habit Scheduling",
+    icon: <CalendarCheck className="w-6 h-6" />,
+    title: "Daily Habit Scheduling",
     description:
-      "Plan your day with ease. Add habits and assign them specific times to receive gentle reminders throughout the day.",
+      "Plan your day with ease. Add habits and assign them specific times to build a structured, personalized routine.",
   },
   {
-    icon: <Bell className="w-6 h-6" />,
-    title: "Smart Reminders",
+    icon: <BellRing className="w-6 h-6" />,
+    title: "Smart Reminders & Nudges",
     description:
-      "Get timely notifications when it's time to complete a habit — no stress, just a calm nudge to stay consistent.",
+      "Get timely, gentle notifications when it's time to complete a habit — no stress, just a calm nudge to stay on track.",
   },
   {
-    icon: <LayoutDashboard className="w-6 h-6" />,
-    title: "Time-Based Habit Organization",
+    icon: <Pencil className="w-6 h-6" />,
+    title: "Quick Journaling for Reflection",
     description:
-      "Habits are grouped by Morning, Afternoon, and Evening, helping you focus on what matters in the right moment.",
+      "Capture thoughts and reflect on your progress. Journaling helps you understand patterns and stay mindful of your journey.",
   },
   {
-    icon: <Heart className="w-6 h-6" />,
-    title: "Clean, Minimal Design",
+    icon: <BrainCircuit className="w-6 h-6" />,
+    title: "AI Insights & Analysis",
     description:
-      "No distractions. Hubbit is designed for clarity — with a lightweight interface and warm accent tones that feel familiar on iOS.",
+      "Let AI analyze your habits and journal entries to uncover trends, suggest improvements, and keep you motivated.",
   },
   {
-    icon: <PlusCircle className="w-6 h-6" />,
-    title: "Quick Add & Edit",
+    icon: <Smartphone className="w-6 h-6" />,
+    title: "Home Screen Widgets",
     description:
-      "Create, update, or remove habits in seconds with an intuitive and smooth workflow.",
+      "Glance at your progress without opening the app. Beautiful widgets keep your habits front and center on your home screen.",
   },
   {
-    icon: <BookOpen className="w-6 h-6" />,
-    title: "Journaling for Reflection",
+    icon: <Flame className="w-6 h-6" />,
+    title: "Streak Tracking",
     description:
-      "Capture your thoughts and reflect on your progress. Journaling helps you understand patterns and stay mindful of your journey.",
+      "Build momentum with visual streaks. Watch your consistency grow day by day and stay motivated to never break the chain.",
   },
 ];
 

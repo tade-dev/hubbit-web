@@ -60,30 +60,30 @@ const Privacy = () => {
           <Link to="/" className="text-muted-foreground hover:text-foreground transition-all">Home</Link>
           <a href="/#features" className="text-muted-foreground hover:text-foreground transition-all">Features</a>
           <Link to="/about" className="text-muted-foreground hover:text-foreground transition-all">About</Link>
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <button className="bg-foreground text-background px-5 py-2 rounded-full opacity-60 cursor-not-allowed transition-all">Get App</button>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Coming Soon</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+          <motion.a
+            href="https://apps.apple.com/us/app/hubbit-ai-habit-tracker/id6758737921"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-foreground text-background px-5 py-2 rounded-full opacity-100 transition-all font-bold"
+          >
+            Get App
+          </motion.a>
         </div>
 
         {/* Mobile Navigation */}
         <div className="md:hidden flex items-center gap-2">
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <button className="bg-foreground text-background px-3 py-1.5 rounded-full text-[10px] font-bold opacity-60 cursor-not-allowed transition-all">Get App</button>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Coming Soon</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+          <motion.a
+            href="https://apps.apple.com/us/app/hubbit-ai-habit-tracker/id6758737921"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-foreground text-background px-3 py-1.5 rounded-full text-[10px] font-bold transition-all"
+          >
+            Get App
+          </motion.a>
 
           <Sheet>
             <SheetTrigger asChild>

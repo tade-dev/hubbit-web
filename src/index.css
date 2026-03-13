@@ -90,14 +90,11 @@
   .animation-delay-600 {
     animation-delay: 0.6s;
   }
-
-  .phone-shadow {
-    box-shadow: 
-      0 25px 50px -12px rgba(0, 0, 0, 0.15),
-      0 0 0 1px rgba(0, 0, 0, 0.03);
-  }
 }
 
-html {
-  scroll-behavior: smooth;
+/* Custom Phone Shadow */
+.phone-shadow {
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(0, 0, 0, 0.03);
 }

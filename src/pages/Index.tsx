@@ -3,7 +3,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import HabbitMascot from "../components/HabbitMascot";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Clock10, Bell, LayoutDashboard, Heart, PlusCircle, BookOpen, ArrowRight, Menu } from "lucide-react";
+import { CalendarCheck, BellRing, Pencil, BrainCircuit, Smartphone, Flame, ArrowRight, Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 import logoImg from "@/assets/logo.jpg";
 import appScreenshot1 from "@/assets/app-screenshot-1.png";
@@ -12,40 +12,40 @@ import appScreenshot3 from "@/assets/app-screenshot-3.png";
 
 const features = [
   {
-    icon: <Clock10 className="w-6 h-6" />,
-    title: "Simple Daily Habit Scheduling",
+    icon: <CalendarCheck className="w-6 h-6" />,
+    title: "Daily Habit Scheduling",
     description:
-      "Plan your day with ease. Add habits and assign them specific times to receive gentle reminders throughout the day.",
+      "Plan your day with ease. Add habits and assign them specific times to build a structured, personalized routine.",
   },
   {
-    icon: <Bell className="w-6 h-6" />,
-    title: "Smart Reminders",
+    icon: <BellRing className="w-6 h-6" />,
+    title: "Smart Reminders & Nudges",
     description:
-      "Get timely notifications when it's time to complete a habit — no stress, just a calm nudge to stay consistent.",
+      "Get timely, gentle notifications when it's time to complete a habit — no stress, just a calm nudge to stay on track.",
   },
   {
-    icon: <LayoutDashboard className="w-6 h-6" />,
-    title: "Time-Based Habit Organization",
+    icon: <Pencil className="w-6 h-6" />,
+    title: "Quick Journaling for Reflection",
     description:
-      "Habits are grouped by Morning, Afternoon, and Evening, helping you focus on what matters in the right moment.",
+      "Capture thoughts and reflect on your progress. Journaling helps you understand patterns and stay mindful of your journey.",
   },
   {
-    icon: <Heart className="w-6 h-6" />,
-    title: "Clean, Minimal Design",
+    icon: <BrainCircuit className="w-6 h-6" />,
+    title: "AI Insights & Analysis",
     description:
-      "No distractions. Hubbit is designed for clarity — with a lightweight interface and warm accent tones that feel familiar on iOS.",
+      "Let AI analyze your habits and journal entries to uncover trends, suggest improvements, and keep you motivated.",
   },
   {
-    icon: <PlusCircle className="w-6 h-6" />,
-    title: "Quick Add & Edit",
+    icon: <Smartphone className="w-6 h-6" />,
+    title: "Home Screen Widgets",
     description:
-      "Create, update, or remove habits in seconds with an intuitive and smooth workflow.",
+      "Glance at your progress without opening the app. Beautiful widgets keep your habits front and center on your home screen.",
   },
   {
-    icon: <BookOpen className="w-6 h-6" />,
-    title: "Journaling for Reflection",
+    icon: <Flame className="w-6 h-6" />,
+    title: "Streak Tracking",
     description:
-      "Capture your thoughts and reflect on your progress. Journaling helps you understand patterns and stay mindful of your journey.",
+      "Build momentum with visual streaks. Watch your consistency grow day by day and stay motivated to never break the chain.",
   },
 ];
 
@@ -75,14 +75,14 @@ const Index = () => {
   return (
     <div className="w-full min-h-screen bg-background">
       <Helmet>
-        <title>Hubbit | Mindful Habit Tracker & Journal</title>
-        <meta name="description" content="Transform your daily routine with Hubbit - the beautiful, mindful habit tracker for iOS. Track habits, journal patterns, and build lasting streaks." />
-        <meta name="keywords" content="habit tracker, daily routine, mindful habits, productivity app, iOS habit tracker, habit journal, building habits, progress visualization" />
-        <meta property="og:title" content="Hubbit | Mindful Habit Tracker & Journal" />
-        <meta property="og:description" content="Transform your daily routine with Hubbit - the beautiful, mindful habit tracker for iOS." />
+        <title>Hubbit | AI Habit Tracker</title>
+        <meta name="description" content="Transform your daily routine with Hubbit - the beautiful, mindful AI habit tracker for iOS. Track habits, journal patterns, and build lasting streaks." />
+        <meta name="keywords" content="habit tracker, daily routine, mindful habits, productivity app, iOS habit tracker, habit journal, building habits, progress visualization, AI habit tracker" />
+        <meta property="og:title" content="Hubbit | AI Habit Tracker" />
+        <meta property="og:description" content="Transform your daily routine with Hubbit - the beautiful, mindful AI habit tracker for iOS." />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Hubbit | Mindful Habit Tracker & Journal" />
+        <meta name="twitter:title" content="Hubbit | AI Habit Tracker" />
         <meta name="twitter:description" content="Transform your daily routine with Hubbit - the beautiful, mindful habit tracker for iOS." />
         <link rel="canonical" href="https://usehubbit.xyz/" />
       </Helmet>
@@ -91,7 +91,7 @@ const Index = () => {
         style={{ scaleX }}
       />
       {/* Hero Section */}
-      <section className="w-full min-h-screen flex flex-col items-center justify-start pt-20 md:pt-32 pb-20 px-6 relative overflow-hidden">
+      <section className="w-full min-h-screen flex flex-col items-center justify-start pt-6 pb-20 px-6 relative overflow-hidden">
         {/* Animated Background Blur Elements */}
         <motion.div
           initial={{ opacity: 0 }}
